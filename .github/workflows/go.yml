@@ -20,9 +20,6 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: Go working directory
-      run: cd Projects/Go
-      
     - name: Set up Go
       uses: actions/setup-go@v4
       with:
@@ -30,6 +27,8 @@ jobs:
 
     - name: Build
       run: go build -v ./...
+      working-directory: Projects/Go
 
     - name: Test
       run: go test -v ./...
+      working-directory: Projects/Go
