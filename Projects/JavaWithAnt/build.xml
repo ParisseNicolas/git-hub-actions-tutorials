@@ -1,0 +1,13 @@
+<project name="sample-ant" default="test" basedir=".">
+  <property name="src.dir" value="src"/>
+  <property name="build.dir" value="build"/>
+
+  <target name="compile">
+    <mkdir dir="${build.dir}"/>
+    <javac srcdir="${src.dir}" destdir="${build.dir}" includeantruntime="false"/>
+  </target>
+
+  <target name="test" depends="compile">
+    <echo message="Add JUnit to run tests, or use Maven/Gradle for easier setup."/>
+  </target>
+</project>
