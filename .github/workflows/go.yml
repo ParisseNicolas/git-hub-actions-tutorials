@@ -17,9 +17,12 @@ on:
 
 
 jobs:
-
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+        working-directory: Projects/Go
     steps:
     - uses: actions/checkout@v4
 
@@ -30,12 +33,9 @@ jobs:
 
     - name: Install Dependencies
       run: go get -v ./...
-      working-directory: Projects/Go
 
     - name: Build
       run: go build -v ./...
-      working-directory: Projects/Go
 
     - name: Test
       run: go test -v ./...
-      working-directory: Projects/Go
