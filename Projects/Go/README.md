@@ -6,6 +6,8 @@ Run tests:
 
 ```
 go test ./...
+
+Note: This project uses `github.com/stretchr/testify` as a test dependency; `go test` will download it automatically (or run `go get` / `go mod tidy`).
 ```
 
 Publish:
