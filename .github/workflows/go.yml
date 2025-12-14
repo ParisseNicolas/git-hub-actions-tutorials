@@ -6,10 +6,14 @@ name: Go
 on:
   push:
     branches: [ "main" ]
-    paths: Projects/Go
+    paths: 
+      - Projects/Go
+      - .github/workflows/go.yml
   pull_request:
     branches: [ "main" ]
-    paths: Projects/Go
+    paths: 
+      - Projects/Go
+      - .github/workflows/go.yml
 
 
 jobs:
